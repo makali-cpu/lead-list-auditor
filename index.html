@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Audit B2B lead lists locally before outreach.">
+  <title>Lead List Auditor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="#">MAKALI LABS</a>
+    <span class="privacy">Local processing only</span>
+  </header>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">FREE OPEN-SOURCE TOOL</p>
+      <h1>Clean your lead list<br>before outreach.</h1>
+      <p class="intro">Find duplicates, missing contact routes, free email addresses,
+        and blocked sources. Your CSV never leaves your browser.</p>
+    </section>
+
+    <section class="workspace">
+      <label id="drop-zone" class="drop-zone" for="csv-file">
+        <span class="upload-icon">+</span>
+        <strong>Drop a CSV here</strong>
+        <span>or click to choose a file</span>
+        <input id="csv-file" type="file" accept=".csv,text/csv">
+      </label>
+      <div class="controls">
+        <label for="blocked-keywords">Blocked keywords, comma separated</label>
+        <input id="blocked-keywords" value="marketplace,directory,wikipedia">
+        <div class="actions">
+          <button id="load-sample" class="secondary">Load sample</button>
+          <button id="export-clean" disabled>Export ready rows</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="summary" class="summary" hidden></section>
+    <section id="results" class="results" aria-live="polite"></section>
+  </main>
+  <footer>Built for practical B2B research by Makali.</footer>
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>
